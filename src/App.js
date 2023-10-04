@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-//import  Comments  from './components/comments/Comments';
+import  CommentMain  from './components/CommentMain.js';
 
 import './App.css';
 
@@ -61,6 +61,7 @@ function App() {
         onChange={(e) => setSearchInput(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
+      
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
@@ -83,10 +84,11 @@ function App() {
           ) : (
             ''
           )}
+          <CommentMain/>
         </>
       ))}
-      {/*<Comments />*/} 
     </div>
+
   );
 }
 
