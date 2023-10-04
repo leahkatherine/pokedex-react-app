@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import { useState } from 'react'; 
+import { useState } from 'react';
+//import  Comments  from './components/comments/Comments';
+
 import './App.css';
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
   const [error, setError] = useState(null);
   const [dataFetched, setDataFetched] = useState(false);
 
-  const URL = `https://pokeapi.co/api/v2/pokemon/${number}`;
+
 
   useEffect(() => {
     if (!searchInput) return;
@@ -83,6 +85,7 @@ function App() {
           )}
         </>
       ))}
+      {/*<Comments />*/} 
     </div>
   );
 }
